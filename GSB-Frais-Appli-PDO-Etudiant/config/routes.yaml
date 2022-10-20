@@ -1,0 +1,36 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_accueil:
+
+  path: /
+  controller: App\Controller\AccueilController::index
+
+#----------------------------------------------------------
+
+app_ComptableConnexion:
+  path: /Comptable/Connexion
+  controller: App\Controller\ComptableController::connexion
+
+app_ComptableConnecter:
+  path: /Comptable/Connecter
+  controller: App\Controller\ComptableController::connecter
+
+app_ComptableAccueil:
+  path: /Comptable/Accueil
+  controller: App\Controller\ComptableController::accueil
+
+#----------------------------------------------------------
+
+app_VisiteurConnexion:
+  path: /Visiteur/Connexion
+  controller: App\Controller\VisiteurController::connexion
+
+app_VisiteurConncter:
+  path: /Visiteur/Connecter
+  controller: App\Controller\VisiteurController::connecter
+
+app_VisiteurAccueil:
+  path: /Visiteur/Accueil
+  controller: App\Controller\VisiteurController::accueil
