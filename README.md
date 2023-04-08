@@ -1,3 +1,10 @@
+![PHP version](https://img.shields.io/badge/php-7.3-blue)
+![Composer version](https://img.shields.io/badge/composer-2.2-navy)
+![MariaDB version](https://img.shields.io/badge/maridb-15.1-red)
+![Symfony version](https://img.shields.io/badge/symfony-5.4-orange)
+![Bulma version](https://img.shields.io/badge/bulma-15.1-pink)
+
+
 ## GSB-Frais<img src="https://user-images.githubusercontent.com/102319778/230720966-cb56e373-2646-4edc-bde0-08bfc8e55956.png" alt="Logo GSB-RV-Android" style="float: right; width: 100px;">
 
 Application web d'enregistrement des frais engagés et de suivi des remboursements
