@@ -74,6 +74,6 @@ Pour utiliser l'application, veuillez suivre les étapes suivantes :
 2. Ouvrez le dossier du projet dans un terminal.
 3. Exécutez la commande suivante pour lancer l'application Symfony : 
 ``` bash 
- php bin/console server:start
+ symfony server:start
 ```
 4. Ouvrez un navigateur web et accédez à l'URL qui s'affiche sur votre terminal.
