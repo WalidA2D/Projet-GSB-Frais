@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head lang='fr'>
+        <title>Filtrer fiche de frais</title>
+        <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="{{ asset('style.css') }}">
+    </head>
+    <body class="box">
+        <h1 class="title is-1 has-text-centered">Formulaire fiche de frais</h1>
+
+    <section class="section">
+  <div class="container">
+    <div class="box">
+      <form action="./FormulaireValiderFicheFrais" method="POST">
+        <div class="field">
+          <label class="label">1. Mois</label>
+          <div class="control">
+            <div class="select">
+              <select name="mois" id="mois-select">
+                <option value="">--Choisir le mois--</option>
+                <option value="Janvie">Janvier</option>
+                <option value="Fevrie">Fevrier</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juille">Juillet</option>
+                <option value="Aout">Aout</option>
+                <option value="Septem">Septembre</option>             
+                <option value="Octobr">Octobre</option> 
+                <option value="Novemb">Novembre</option>
+                <option value="Decemb">Decembre</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">2. Identifiant Visiteur</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Identifiant..." name="idVisiteur" required>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Rechercher</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light">Annuler</button>
+          </div>
+          <div class="control">
+            <a href="/Comptable/Accueil" class="button is-link is-light">Retour</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+    </body>

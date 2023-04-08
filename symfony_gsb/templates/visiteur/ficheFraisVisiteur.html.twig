@@ -1,0 +1,114 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GSB Frais - Connexion</title>
+    </head>
+    <body>
+
+            
+        
+        
+        <form action="./FicheDeFraisController" method="GET">
+            <h1>Frais forfait</h1>
+            <table>
+                <tbody>
+
+                        {% for uneQuantiteLibelle in quantitesLibelles %}
+
+                        <tr>
+                            <td>{{uneQuantiteLibelle['libelle']}}</td>
+                            <td> <input type="number" min="0" value={{uneQuantiteLibelle['quantite']}} name={{uneQuantiteLibelle['idFraisForfait']}} required> </td>
+                        </tr>
+
+                    {% endfor %}
+
+ 
+                </tbody>
+            </table>
+
+            <br/>
+
+
+
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Frais hors forfait</td>
+                        <td> <input type="text" name="libelle"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Date</td>
+                        <td> <input type="date" name="date"> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Montant</td>
+                        <td> <input type="number" min="0" value="0" name="montant"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            
+            <input type="submit" id='submit'  value="Soumettre" >
+            <br/>
+
+            <br/>
+
+            <h2> Fiche frais hors forfait </h2>
+
+        </form>
+        
+
+
+                <thead>
+                        <tr>
+                            <td>id</td>
+                            <td>Libellé</td>
+                            <td>date</td>
+                            <td>montant</td>
+                        </tr>
+                </thead>
+
+
+    
+
+                {% for uneLigneFraisHorsForfait in ligneFraisHorsForfait %}
+
+                    <br/>
+                    <br/>
+
+                    <tbody>
+
+                        <tr>
+                            <td>{{uneLigneFraisHorsForfait['id']}}</td> 
+                            <td>{{uneLigneFraisHorsForfait['libelle']}}</td>
+                            <td>{{uneLigneFraisHorsForfait['date']}}</td>
+                            <td>{{uneLigneFraisHorsForfait['montant']}}</td>
+                            <br/>
+                            <form action="/Visiteur/SupprimerFicheHorsForfait" method="POST">
+                                <br/>
+                                <input type="hidden" value={{uneLigneFraisHorsForfait['id']}} name="fraisHorsForfait" />
+                                <button  onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')" type="submit">Supprimer</button>
+                            </form>
+                        </tr>
+
+                    </tbody>
+
+                {% endfor %}
+
+            
+
+
+				
+
+        
+
+
+    </body>
+</html>

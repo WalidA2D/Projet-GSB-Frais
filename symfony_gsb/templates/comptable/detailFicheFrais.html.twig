@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des lignes de frais forfaitaires</title>
+</head>
+<body>
+    <h1>Détail</h1>
+    <h2> <a href="./"> Retour</a> </h2>
+    <h2>Liste des lignes de frais forfaitaires</h2>
+    <ul>
+       
+            
+            <li>idVisiteur : {{ ficheFrais['idVisiteur']}}<br></li>
+            <li>mois : {{ ficheFrais['mois']}}<br></li>
+            <li>idFraisForfait : {{ ficheFrais['idFraisForfait']}}<br></li>
+            <li>quantite : {{ ficheFrais['quantite']}}<br></li>
+           
+        
+    </ul>
+    <h2>Liste des lignes de frais hors forfaitaires</h2>
+    <ul>
+    
+            <li>id : {{ ficheHorsFrais['id']}}<br></li>
+            <li>idVisiteur : {{ ficheHorsFrais['idVisiteur']}}<br></li>
+            <li>mois : {{ ficheHorsFrais['mois']}}<br></li>
+            <li>libelle : {{ ficheHorsFrais['libelle']}}<br></li>
+            <li>date : {{ ficheHorsFrais['date']}}<br></li>
+            <li>montant : {{ ficheHorsFrais['montant']}}<br></li>
+        
+    </ul>
+</body>
+</html>

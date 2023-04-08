@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+    <head lang='fr'>
+        <title>Modifier fiche de frais</title>
+        <meta charset="utf-8">
+        <!-- importer le fichier de style -->
+    </head>
+    <body>
+    <div id="container">
+    
+            <!-- zone de connexion -->
+            
+            <form action="./ModifierFicheFrais" method="GET">
+                <h1>Modifier fiche de frais</h1>
+                <h2> <a href="./"> Retour</a> </h2>
+
+                </br>
+                
+                <label><b>1. Nombre de Justificatifs</b></label>
+                <input type="text" placeholder="Justificatifs..." name="nbJustificatifs" required="required" autocomplete="off">
+                <label><b>2. Montant Valide</b></label>
+                <input type="text" placeholder="Montant..." name="montantValide" required="required" autocomplete="off">
+                
+                <input type="submit" id='submit' value="Modifier" >
+                <input type="reset" id='reset' value='Annuler' > 
+                
+                <a class="text-purple" href=".">Retour</a>
+                
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_accueil:
+
+  path: /
+  controller: App\Controller\AccueilController::index
+
+
+#Visiteur-------------------------------------------------------------
+
+
+app_VisiteurConnexion:
+  path: /Visiteur/Connexion
+  controller: App\Controller\VisiteurController::connexion
+
+app_VisiteurConnecter:
+  path: /Visiteur/Connecter
+  controller: App\Controller\VisiteurController::connecter
+
+app_VisiteurDeconnecter:
+  path: /Visiteur/Deconnecter
+  controller: App\Controller\VisiteurController::deconnecter
+
+app_VisiteurAccueil:
+  path: /Visiteur/Accueil
+  controller: App\Controller\VisiteurController::accueil
+
+app_VisiteurFicheFraisVue:
+  path: /Visiteur/FicheDeFrais
+  controller: App\Controller\VisiteurController::ficheFraisVue 
+
+app_VisiteurFicheFrais:
+  path: /Visiteur/FicheDeFraisController
+  controller: App\Controller\VisiteurController::ficheFrais 
+
+app_SupprimerFicheHorsForfait:
+  path: /Visiteur/SupprimerFicheHorsForfait
+  controller: App\Controller\VisiteurController::supprimerFicheHorsForfait
+  methods: [POST]
+
+#Comptable----------------------------------------------------------
+
+
+app_ComptableConnexion:
+  path: /Comptable/Connexion
+  controller: App\Controller\ComptableController::connexion
+
+app_ComptableConnecter:
+  path: /Comptable/Connecter
+  controller: App\Controller\ComptableController::connecter
+
+app_ComptableDeconnecter:
+  path: /Comptable/Deconnecter
+  controller: App\Controller\ComptableController::deconnecter
+
+app_ComptableAccueil:
+  path: /Comptable/Accueil
+  controller: App\Controller\ComptableController::accueil
+
+
+
+app_ComptableFicheFormulaire:
+  path: /Comptable/FormulaireFicheFrais
+  controller: App\Controller\ComptableController::formulaireFicheFrais
+
+app_ComptableFicheValideFormulaire:
+  path: /Comptable/FormulaireValiderFicheFrais
+  controller: App\Controller\ComptableController::formulaireValiderFicheFrais
+
+app_ComptableFiche:
+  path: /Comptable/SuivreFicheFrais
+  controller: App\Controller\ComptableController::suivreFicheFrais
+
+
+
+
+
+app_ComptableModifFiche:
+  path: /Comptable/SuivreFicheFrais/Modifier
+  controller: App\Controller\ComptableController::modif
+
+app_ComptableModifierFiche:
+  path: /Comptable/SuivreFicheFrais/ModifierFicheFrais
+  controller: App\Controller\ComptableController::modifierFicheFrais
+
+app_ComptableDetailFiche:
+  path: /Comptable/SuivreFicheFrais/DetailFicheFrais
+  controller: App\Controller\ComptableController::detailFicheFrais
+
+
+
+app_ComptableRembourserFiche:
+  path: /Comptable/SuivreFicheFrais/Rembourser
+  controller: App\Controller\ComptableController::rembourserFicheFrais
