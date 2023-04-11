@@ -76,6 +76,7 @@ INSERT INTO `Comptable` (`id`, `nom`, `prenom`, `login`, `mdp`) VALUES
 
 insert into FicheFrais(idVisiteur,mois,AnneeMois) values("a131", "Mars", "03-2023");
 insert into LigneFraisForfait values ("a131", "Mars",  "03-2023", "ETP", 0);
+insert into LigneFraisHorsForfait(idVisiteur,mois,AnneeMois,libelle,date,montant) values ("a131", "Mars",  "03-2023", "Voyage Mexique", "2023-03-10",0);
 
 
 

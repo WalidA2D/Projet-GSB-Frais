@@ -111,8 +111,9 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
         // line 40
         echo "          ";
         if ((twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 40, $this->source); })()), "idEtat", [], "array", false, false, false, 40) == "CL")) {
+            echo " 
+          <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Modifier\">";
             // line 41
-            echo "          <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Modifier\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 41, $this->source); })()), "idEtat", [], "array", false, false, false, 41), "html", null, true);
             echo "</a></button></td>
           ";
@@ -188,7 +189,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
 
     public function getDebugInfo()
     {
-        return array (  137 => 51,  132 => 48,  129 => 47,  124 => 44,  121 => 43,  115 => 41,  112 => 40,  106 => 38,  104 => 37,  100 => 36,  96 => 35,  92 => 34,  88 => 33,  84 => 32,  78 => 28,  74 => 26,  72 => 25,  50 => 6,  43 => 1,);
+        return array (  138 => 51,  133 => 48,  130 => 47,  125 => 44,  122 => 43,  117 => 41,  112 => 40,  106 => 38,  104 => 37,  100 => 36,  96 => 35,  92 => 34,  88 => 33,  84 => 32,  78 => 28,  74 => 26,  72 => 25,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -232,7 +233,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
           {% if ficheFrais['idEtat'] == \"CR\" %}
           <td>{{ ficheFrais['idEtat']}}</td>
           {% endif %}
-          {% if ficheFrais['idEtat'] == \"CL\" %}
+          {% if ficheFrais['idEtat'] == \"CL\" %} 
           <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Modifier\">{{ ficheFrais['idEtat']}}</a></button></td>
           {% endif %}
           {% if ficheFrais['idEtat'] == \"VA\" %}
@@ -276,6 +277,6 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
       </footer>
 -!>
     
-", "comptable/suivreFicheFrais.html.twig", "/home/developpeur/Documents/ProjetCom/Projet-GSB-Frais/symfony_gsb/templates/comptable/suivreFicheFrais.html.twig");
+", "comptable/suivreFicheFrais.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/suivreFicheFrais.html.twig");
     }
 }

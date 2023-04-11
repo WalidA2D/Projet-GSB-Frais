@@ -95,6 +95,6 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
 </html>
 
 
-", "accueil/index.html.twig", "/home/developpeur/Documents/ProjetCom/Projet-GSB-Frais/symfony_gsb/templates/accueil/index.html.twig");
+", "accueil/index.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/accueil/index.html.twig");
     }
 }

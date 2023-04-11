@@ -1671,6 +1671,6 @@ class __TwigTemplate_7506e83eab0af3354c046541a85e33ae extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/developpeur/Documents/ProjetCom/Projet-GSB-Frais/symfony_gsb/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

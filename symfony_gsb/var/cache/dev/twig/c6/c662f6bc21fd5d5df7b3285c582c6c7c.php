@@ -160,6 +160,6 @@ class __TwigTemplate_cde0396280d4c289319d865c39fb6322 extends Template
         
     </ul>
 </body>
-</html>", "comptable/detailFicheFrais.html.twig", "/home/developpeur/Documents/ProjetCom/Projet-GSB-Frais/symfony_gsb/templates/comptable/detailFicheFrais.html.twig");
+</html>", "comptable/detailFicheFrais.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/detailFicheFrais.html.twig");
     }
 }
