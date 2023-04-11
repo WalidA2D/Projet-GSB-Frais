@@ -12,11 +12,11 @@ Application web d'enregistrement des frais engagés et de suivi des remboursemen
 
 ## Contexte
 
-- [GSB - Organisation](https://github.com/WalidA2D/E5-GSB-Frais-Docs/blob/master/01-GSB-Organisation.pdf)
-- [GSB - Cahier des charges](https://github.com/WalidA2D/E5-GSB-Frais-Docs/blob/master/02-SIO-SLAM-GSB-Frais-CahierDesCharges.pdf)
-- [GSB - Exemples](https://github.com/WalidA2D/E5-GSB-Frais-Docs/blob/master/04-GSB-Frais-Commentaires.pdf)
-- [GSB - Architecture de l'existant](https://github.com/WalidA2D/E5-GSB-Frais-Docs/blob/master/05-GSB-Frais-Architecture-Application-Existante.pdf)
-- [GSB - Cas d'utilisations](https://github.com/WalidA2D/E5-GSB-Frais-Docs/blob/master/03-GSB-Frais-UC-BD.pdf)
+- [GSB - Organisation](https://github.com/WalidA2D/GSB-Frais-Docs/blob/master/01-GSB-Organisation.pdf)
+- [GSB - Cahier des charges](https://github.com/WalidA2D/GSB-Frais-Docs/blob/master/02-SIO-SLAM-GSB-Frais-CahierDesCharges.pdf)
+- [GSB - Exemples](https://github.com/WalidA2D/GSB-Frais-Docs/blob/master/04-GSB-Frais-Commentaires.pdf)
+- [GSB - Architecture de l'existant](https://github.com/WalidA2D/GSB-Frais-Docs/blob/master/05-GSB-Frais-Architecture-Application-Existante.pdf)
+- [GSB - Cas d'utilisations](https://github.com/WalidA2D/GSB-Frais-Docs/blob/master/03-GSB-Frais-UC-BD.pdf)
 
 ## Installation
 
