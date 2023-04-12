@@ -35,4 +35,5 @@ return [
     'app_ComptableModifierFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::modifierFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/ModifierFicheFrais']], [], [], []],
     'app_ComptableDetailFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::detailFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/DetailFicheFrais']], [], [], []],
     'app_ComptableRembourserFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::rembourserFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/Rembourser']], [], [], []],
+    'app_ComptableSuivreFicheFraisValider' => [[], ['_controller' => 'App\\Controller\\ComptableController::suivreFicheFraisValider'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide']], [], [], []],
 ];

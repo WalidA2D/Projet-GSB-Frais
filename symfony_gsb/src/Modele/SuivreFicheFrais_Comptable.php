@@ -79,6 +79,40 @@ class SuivreFicheFrais_Comptable {
             header( 'Location: ../index.php?echec=0' ) ;
         }
     } 
+
+    public static function suivreFicheFraisValider(){
+        try {
+    
+            /*$bd = ConnexionBdd::getConnexion();*/
+    
+            $bd = new PDO(
+    
+                'mysql:host=localhost;dbname=gsbFrais' ,
+                'adminGsb' ,
+                'azerty'
+            );
+    
+                $sql = 'select * '
+                . 'from FicheFrais '
+                . 'where  idEtat = "VA" or idEtat="RB" or idEtat="MP"';
+                
+                    
+                $st = $bd -> prepare( $sql ) ;
+    
+                $st -> execute() ;
+                $resultat = $st -> fetch(PDO::FETCH_ASSOC);
+    
+                
+                return $resultat;
+    
+            }
+    
+        catch( PDOException $e ){
+    
+            die("Erreur : " . $e->getMessage());
+            header( 'Location: ../index.php?echec=0' ) ;
+        }
+    } 
     
     public static function modifierFicheFrais($nbJustificatifs, $montantValide, $mois, $idVisiteur){
             
@@ -92,7 +126,7 @@ class SuivreFicheFrais_Comptable {
                 . 'set nbJustificatifs = :nbJustificatifs ' 
                 . ', montantValide = :montantValide '
                 . ', dateModif = date( now() ) '
-                . ', idEtat = "VA" '
+                . ', idEtat = "MP" '
                 . 'where idVisiteur = :idVisiteur '
                 . 'and mois = :mois';
     
@@ -104,6 +138,36 @@ class SuivreFicheFrais_Comptable {
                               ':idVisiteur' => $idVisiteur ,
                               ':nbJustificatifs' => $nbJustificatifs ,
                               ':montantValide' => $montantValide 
+                            )
+                        ) ;
+            
+            
+        }
+        catch( PDOException $e ){
+              die("Erreur : " . $e->getMessage());
+              header( 'Location: ../index.php?echec=0' ) ;
+        }
+    } 
+
+    public static function validerFicheFrais($mois, $idVisiteur){
+            
+        try {
+            $bd = new PDO(
+                'mysql:host=localhost;dbname=gsbFrais' ,
+                'adminGsb' ,
+                'azerty'
+            );
+            $sql = 'update FicheFrais ' 
+                . 'set idEtat = "VA" ' 
+                . 'where idVisiteur = :idVisiteur '
+                . 'and mois = :mois';
+    
+    
+            $st = $bd -> prepare( $sql ) ;
+    
+            return $st -> execute(array(
+                              ':mois' => $mois ,
+                              ':idVisiteur' => $idVisiteur ,
                             )
                         ) ;
             

@@ -22,9 +22,8 @@
           <th>Nombre de justificatifs</th>
           <th>Montant valide</th>
           <th>Date modif</th>
-          {% if ficheFrais['idEtat'] != "RB"%}
           <th>Etat</th>
-          {% endif %}
+          
         </tr>
       </thead>
       <tbody>
@@ -38,24 +37,18 @@
           <td>{{ ficheFrais['idEtat']}}</td>
           {% endif %}
           {% if ficheFrais['idEtat'] == "CL" %} 
-          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/Modifier">{{ ficheFrais['idEtat']}}</a></button></td>
+          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/FValider">{{ ficheFrais['idEtat']}}</a></button></td>
           {% endif %}
           {% if ficheFrais['idEtat'] == "VA" %}
-          <td>Mise en paiement</td>
-          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/Rembourser">Remboursée</a></button></td>
+          <td>{{ ficheFrais['idEtat']}}</td>
           {% endif %}
-          {% if ficheFrais['idEtat'] == "RB" %}
-          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/DetailFicheFrais">Détail</a></button></td>
-          <td>Fiche payée</td>
-          {% endif %}
+
         </tr>
       </tbody>
     </table>
+  <button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/DetailFicheFrais">Détail</a></button>
 
 
-
-  </body>
-</html>  
 <!--
       <footer class="footer">
         <div class="container is-max-desktop">

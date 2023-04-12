@@ -1,0 +1,76 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('style.css') }}">
+        <title>GSB Frais - Suivre fiche de frais</title>
+    </head>
+    <body class="box">
+      <h1 class="title is-1 has-text-centered">Suivre fiche de frais</h1>
+
+      <h2 class="subtitle is-3 has-text-centered">
+        <button class="button is-link is-light"><a href="/Comptable/Accueil">Retour</a></button>    
+      </h2>  
+
+
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Id Visiteur</th>
+          <th>Mois</th>
+          <th>Nombre de justificatifs</th>
+          <th>Montant valide</th>
+          <th>Date modif</th>
+          {% if ficheFrais['idEtat'] != "RB"%}
+          <th>Etat</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ ficheFrais['idVisiteur']}}</td>
+          <td>{{ ficheFrais['mois']}}</td>
+          <td>{{ ficheFrais['nbJustificatifs']}}</td>
+          <td>{{ ficheFrais['montantValide']}}</td>
+          <td>{{ ficheFrais['dateModif']}}</td>
+          {% if ficheFrais['idEtat'] == "VA" %}
+          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/Modifier">{{ ficheFrais['idEtat']}}</a></button></td>
+          {% endif %}
+          {% if ficheFrais['idEtat'] == "MP" %}
+          <td>Mise en paiement</td>
+          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/Rembourser">Remboursée</a></button></td>
+          {% endif %}
+          {% if ficheFrais['idEtat'] == "RB" %}
+          <td><button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/DetailFicheFrais">Détail</a></button></td>
+          <td>Fiche payée</td>
+          {% endif %}
+        </tr>
+      </tbody>
+    </table>
+
+
+<!--
+      <footer class="footer">
+        <div class="container is-max-desktop">
+        <div class="columns">
+      <div class="column">
+        <strong>RB</strong>
+        <strong>Remboursée</strong>
+      </div>
+      <div class="column">
+        <strong>CL</strong>
+        <strong>Saisie clôturée</strong>
+      </div>
+      <div class="column">
+        <strong>CR</strong>
+        <strong>Fiche créée, saisie en cours</strong>
+      </div>
+      <div class="column">
+        <strong>VA</strong>
+        <strong>Validée et mise en paiement</strong>
+      </div>
+      </div>
+      </div>
+      </footer>
+-!>

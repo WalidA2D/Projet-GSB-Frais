@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `Visiteur` (
   `nbJustificatifs` int(11) DEFAULT 0,
   `montantValide` decimal(10,2) DEFAULT 0,
   `dateModif` date DEFAULT NULL,
-  `idEtat` char(2) DEFAULT 'CL',
+  `idEtat` char(2) DEFAULT 'CR',
   PRIMARY KEY (`idVisiteur`,`AnneeMois`, `idEtat`),
   FOREIGN KEY (`idEtat`) REFERENCES Etat(`id`),
   FOREIGN KEY (`idVisiteur`) REFERENCES Visiteur(`id`)

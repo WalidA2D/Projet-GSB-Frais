@@ -94,3 +94,12 @@ app_ComptableDetailFiche:
 app_ComptableRembourserFiche:
   path: /Comptable/SuivreFicheFrais/Rembourser
   controller: App\Controller\ComptableController::rembourserFicheFrais
+
+
+app_ComptableSuivreFicheFraisValider:
+  path: /Comptable/SuivreFicheFrais/SuivreValide
+  controller: App\Controller\ComptableController::suivreFicheFraisValider
+
+  app_ComptableValider:
+  path: /Comptable/SuivreFicheFrais/FValider
+  controller: App\Controller\ComptableController::validerFicheFrais

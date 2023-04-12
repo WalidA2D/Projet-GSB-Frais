@@ -51,6 +51,7 @@ class __TwigTemplate_6d43bdf7c2b0d76b5a1e3d3105219f39 extends Template
 \t<h1>Bienvenue Comptable</h1>
 
     <h2> <a href=\"./FormulaireFicheFrais\"> Valider les fiches de frais </a> </h2>
+\t<h2> <a href=\"./SuivreValide\"> Suivre les fiches de frais valider </a> </h2>
 
 \t<button> <a href=\"./Deconnecter\"</a> Se Deconnecter </button>
 
@@ -88,6 +89,7 @@ class __TwigTemplate_6d43bdf7c2b0d76b5a1e3d3105219f39 extends Template
 \t<h1>Bienvenue Comptable</h1>
 
     <h2> <a href=\"./FormulaireFicheFrais\"> Valider les fiches de frais </a> </h2>
+\t<h2> <a href=\"./SuivreValide\"> Suivre les fiches de frais valider </a> </h2>
 
 \t<button> <a href=\"./Deconnecter\"</a> Se Deconnecter </button>
 

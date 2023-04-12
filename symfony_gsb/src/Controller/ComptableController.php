@@ -167,6 +167,28 @@ class ComptableController extends AbstractController
         
     }
 
+    public function suivreFicheFraisValider(): Response
+    {
+        session_start();
+
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            $mois = $_SESSION[ 'mois' ] ;
+            $idVisiteur = $_SESSION[ 'idVisiteur' ] ;
+
+            $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFraisValider();
+
+            
+
+            return $this->render('comptable/suivreFicheFraisValider.html.twig', [
+                'ficheFrais' => $ficheFrais,            
+            ]);
+        }
+
+        
+    }
+
     
 
 
@@ -199,6 +221,31 @@ class ComptableController extends AbstractController
             $montantValide = $_GET[ 'montantValide' ] ;
     
             $modif = SuivreFicheFrais_Comptable::modifierFicheFrais($nbJustificatifs, $montantValide, $mois, $idVisiteur);
+    
+            
+            if($modif != null){
+                return $this->redirect('.');
+            }
+            else{
+                return $this->redirect('.');
+            }
+        }
+
+        
+    }
+
+    public function validerFicheFrais(): Response
+    {
+        session_start();
+
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            $mois = $_SESSION[ 'mois' ] ;
+            $idVisiteur = $_SESSION[ 'idVisiteur' ] ;
+            
+    
+            $modif = SuivreFicheFrais_Comptable::validerFicheFrais($mois, $idVisiteur);
     
             
             if($modif != null){
