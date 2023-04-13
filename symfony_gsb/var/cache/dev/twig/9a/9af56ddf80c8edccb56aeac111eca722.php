@@ -45,17 +45,31 @@ class __TwigTemplate_6d43bdf7c2b0d76b5a1e3d3105219f39 extends Template
 \t<meta charset=\"UTF-8\">
 \t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-\t<title>GSB Frais - Connexion</title>
+\t<link rel=\"stylesheet\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\">
+\t<title>GSB Frais - Comptable Accueil</title>
 </head>
 <body>
-\t<h1>Bienvenue Comptable</h1>
-
-    <h2> <a href=\"./FormulaireFicheFrais\"> Valider les fiches de frais </a> </h2>
-\t<h2> <a href=\"./SuivreValide\"> Suivre les fiches de frais valider </a> </h2>
-
-\t<button> <a href=\"./Deconnecter\"</a> Se Deconnecter </button>
-
-
+    <section class=\"section\">
+        <div class=\"container\">
+            <h1 class=\"title has-text-centered\">Bienvenue Comptable</h1>
+            <div class=\"columns\">
+                <div class=\"column\">
+                    <h2 class=\"subtitle\">
+                        <a href=\"./FormulaireFicheFrais\" class=\"button is-primary is-large is-fullwidth\">Valider les fiches de frais</a>
+                    </h2>
+                </div>
+                <div class=\"column\">
+                    <h2 class=\"subtitle\">
+                        <a href=\"/Comptable/SuivreFicheFrais/SuivreValide\" class=\"button is-primary is-large is-fullwidth\">Suivre les fiches de frais validées</a>
+                    </h2>
+                </div>
+            </div>
+            <button class=\"button is-danger\"><a href=\"./Deconnecter\" style=\"color:white;\">Se Deconnecter</a></button>
+        </div>
+    </section>
 </body>
 </html>";
         
@@ -71,9 +85,14 @@ class __TwigTemplate_6d43bdf7c2b0d76b5a1e3d3105219f39 extends Template
         return "comptable/accueilComptable.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -83,17 +102,28 @@ class __TwigTemplate_6d43bdf7c2b0d76b5a1e3d3105219f39 extends Template
 \t<meta charset=\"UTF-8\">
 \t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-\t<title>GSB Frais - Connexion</title>
+\t<link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\">
+\t<title>GSB Frais - Comptable Accueil</title>
 </head>
 <body>
-\t<h1>Bienvenue Comptable</h1>
-
-    <h2> <a href=\"./FormulaireFicheFrais\"> Valider les fiches de frais </a> </h2>
-\t<h2> <a href=\"./SuivreValide\"> Suivre les fiches de frais valider </a> </h2>
-
-\t<button> <a href=\"./Deconnecter\"</a> Se Deconnecter </button>
-
-
+    <section class=\"section\">
+        <div class=\"container\">
+            <h1 class=\"title has-text-centered\">Bienvenue Comptable</h1>
+            <div class=\"columns\">
+                <div class=\"column\">
+                    <h2 class=\"subtitle\">
+                        <a href=\"./FormulaireFicheFrais\" class=\"button is-primary is-large is-fullwidth\">Valider les fiches de frais</a>
+                    </h2>
+                </div>
+                <div class=\"column\">
+                    <h2 class=\"subtitle\">
+                        <a href=\"/Comptable/SuivreFicheFrais/SuivreValide\" class=\"button is-primary is-large is-fullwidth\">Suivre les fiches de frais validées</a>
+                    </h2>
+                </div>
+            </div>
+            <button class=\"button is-danger\"><a href=\"./Deconnecter\" style=\"color:white;\">Se Deconnecter</a></button>
+        </div>
+    </section>
 </body>
 </html>", "comptable/accueilComptable.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/accueilComptable.html.twig");
     }

@@ -3,16 +3,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GSB Frais - Connexion</title>
+	<link rel="stylesheet" href="{{ asset('style.css') }}">
+	<title>GSB Frais - Comptable Accueil</title>
 </head>
 <body>
-	<h1>Bienvenue Comptable</h1>
-
-    <h2> <a href="./FormulaireFicheFrais"> Valider les fiches de frais </a> </h2>
-	<h2> <a href="./SuivreValide"> Suivre les fiches de frais valider </a> </h2>
-
-	<button> <a href="./Deconnecter"</a> Se Deconnecter </button>
-
-
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Bienvenue Comptable</h1>
+            <div class="columns">
+                <div class="column">
+                    <h2 class="subtitle">
+                        <a href="./FormulaireFicheFrais" class="button is-primary is-large is-fullwidth">Valider les fiches de frais</a>
+                    </h2>
+                </div>
+                <div class="column">
+                    <h2 class="subtitle">
+                        <a href="/Comptable/SuivreFicheFrais/SuivreValide" class="button is-primary is-large is-fullwidth">Suivre les fiches de frais validées</a>
+                    </h2>
+                </div>
+            </div>
+            <button class="button is-danger"><a href="./Deconnecter" style="color:white;">Se Deconnecter</a></button>
+        </div>
+    </section>
 </body>
 </html>

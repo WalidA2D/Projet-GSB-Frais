@@ -52,7 +52,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
         <title>GSB Frais - Suivre fiche de frais</title>
     </head>
     <body class=\"box\">
-      <h1 class=\"title is-1 has-text-centered\">Suivre fiche de frais</h1>
+      <h1 class=\"title is-1 has-text-centered\">Valider fiche de frais</h1>
 
       <h2 class=\"subtitle is-3 has-text-centered\">
         <button class=\"button is-link is-light\"><a href=\"/Comptable/Accueil\">Retour</a></button>    
@@ -106,7 +106,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
         echo "          ";
         if ((twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 39, $this->source); })()), "idEtat", [], "array", false, false, false, 39) == "CL")) {
             echo " 
-          <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Modifier\">";
+          <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Valider\">";
             // line 40
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 40, $this->source); })()), "idEtat", [], "array", false, false, false, 40), "html", null, true);
             echo "</a></button></td>
@@ -189,7 +189,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
         <title>GSB Frais - Suivre fiche de frais</title>
     </head>
     <body class=\"box\">
-      <h1 class=\"title is-1 has-text-centered\">Suivre fiche de frais</h1>
+      <h1 class=\"title is-1 has-text-centered\">Valider fiche de frais</h1>
 
       <h2 class=\"subtitle is-3 has-text-centered\">
         <button class=\"button is-link is-light\"><a href=\"/Comptable/Accueil\">Retour</a></button>    
@@ -219,7 +219,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
           <td>{{ ficheFrais['idEtat']}}</td>
           {% endif %}
           {% if ficheFrais['idEtat'] == \"CL\" %} 
-          <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Modifier\">{{ ficheFrais['idEtat']}}</a></button></td>
+          <td><button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/Valider\">{{ ficheFrais['idEtat']}}</a></button></td>
           {% endif %}
           {% if ficheFrais['idEtat'] == \"VA\" %}
           <td>{{ ficheFrais['idEtat']}}</td>

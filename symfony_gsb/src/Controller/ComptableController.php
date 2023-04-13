@@ -296,9 +296,9 @@ class ComptableController extends AbstractController
             $idVisiteur = $_SESSION[ 'idVisiteur' ] ;
     
             $rembourse = SuivreFicheFrais_Comptable::rembourserFicheFrais($mois, $idVisiteur);
-            $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFrais($mois, $idVisiteur);
+            $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFraisValider();
             
-            return $this->render('comptable/suivreFicheFrais.html.twig', [
+            return $this->render('comptable/suivreFicheFraisValider.html.twig', [
                 'ficheFrais' => $ficheFrais, 
             ]);
         }

@@ -45,33 +45,46 @@ class __TwigTemplate_ae461348e88dc75f12a47292f03ca170 extends Template
 <html>
     <head lang='fr'>
         <title>Modifier fiche de frais</title>
-        <meta charset=\"utf-8\">
-        <!-- importer le fichier de style -->
+        <meta charset=\"UTF-8\">
+        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <link rel=\"stylesheet\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\">
+        
     </head>
-    <body>
-    <div id=\"container\">
-    
-            <!-- zone de connexion -->
-            
-            <form action=\"./ModifierFicheFrais\" method=\"GET\">
-                <h1>Modifier fiche de frais</h1>
-                <h2> <a href=\"./\"> Retour</a> </h2>
-
-                </br>
-                
-                <label><b>1. Nombre de Justificatifs</b></label>
-                <input type=\"text\" placeholder=\"Justificatifs...\" name=\"nbJustificatifs\" required=\"required\" autocomplete=\"off\">
-                <label><b>2. Montant Valide</b></label>
-                <input type=\"text\" placeholder=\"Montant...\" name=\"montantValide\" required=\"required\" autocomplete=\"off\">
-                
-                <input type=\"submit\" id='submit' value=\"Modifier\" >
-                <input type=\"reset\" id='reset' value='Annuler' > 
-                
-                <a class=\"text-purple\" href=\".\">Retour</a>
-                
-            </form>
-        </div>
-    </body>
+  <body>
+    <div class=\"container\">
+      <section class=\"section\">
+        <h1 class=\"title is-1 has-text-centered\">Modifier fiche de frais</h1>
+        <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/ModifierFicheFrais\" method=\"GET\">
+          <div class=\"field\">
+            <label class=\"label\">1. Nombre de Justificatifs</label>
+            <div class=\"control\">
+              <input class=\"input\" type=\"text\" placeholder=\"Justificatifs...\" name=\"nbJustificatifs\" required=\"required\" autocomplete=\"off\">
+            </div>
+          </div>
+          <div class=\"field\">
+            <label class=\"label\">2. Montant Valide</label>
+            <div class=\"control\">
+              <input class=\"input\" type=\"text\" placeholder=\"Montant...\" name=\"montantValide\" required=\"required\" autocomplete=\"off\">
+            </div>
+          </div>
+          <div class=\"field is-grouped\">
+            <div class=\"control\">
+              <button class=\"button is-primary\" type=\"submit\"><i class=\"fas fa-edit\"></i> Modifier</button>
+            </div>
+            <div class=\"control\">
+              <button class=\"button is-light\" type=\"reset\"><i class=\"\"></i> Annuler</button>
+            </div>
+          </div>
+        </form>
+        <h2 class=\"subtitle is-5 has-text-centered\"><a href=\"/Comptable/SuivreFicheFrais/SuivreValide\"><i class=\"fas fa-arrow-left\"></i> Retour</a></h2>
+      </section>
+    </div>
+    <script defer src=\"https://use.fontawesome.com/releases/v5.14.0/js/all.js\"></script>
+  </body>
 </html>";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -86,9 +99,14 @@ class __TwigTemplate_ae461348e88dc75f12a47292f03ca170 extends Template
         return "comptable/modifierFicheFrais.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  53 => 9,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -98,33 +116,43 @@ class __TwigTemplate_ae461348e88dc75f12a47292f03ca170 extends Template
 <html>
     <head lang='fr'>
         <title>Modifier fiche de frais</title>
-        <meta charset=\"utf-8\">
-        <!-- importer le fichier de style -->
+        <meta charset=\"UTF-8\">
+        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\">
+        
     </head>
-    <body>
-    <div id=\"container\">
-    
-            <!-- zone de connexion -->
-            
-            <form action=\"./ModifierFicheFrais\" method=\"GET\">
-                <h1>Modifier fiche de frais</h1>
-                <h2> <a href=\"./\"> Retour</a> </h2>
-
-                </br>
-                
-                <label><b>1. Nombre de Justificatifs</b></label>
-                <input type=\"text\" placeholder=\"Justificatifs...\" name=\"nbJustificatifs\" required=\"required\" autocomplete=\"off\">
-                <label><b>2. Montant Valide</b></label>
-                <input type=\"text\" placeholder=\"Montant...\" name=\"montantValide\" required=\"required\" autocomplete=\"off\">
-                
-                <input type=\"submit\" id='submit' value=\"Modifier\" >
-                <input type=\"reset\" id='reset' value='Annuler' > 
-                
-                <a class=\"text-purple\" href=\".\">Retour</a>
-                
-            </form>
-        </div>
-    </body>
+  <body>
+    <div class=\"container\">
+      <section class=\"section\">
+        <h1 class=\"title is-1 has-text-centered\">Modifier fiche de frais</h1>
+        <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/ModifierFicheFrais\" method=\"GET\">
+          <div class=\"field\">
+            <label class=\"label\">1. Nombre de Justificatifs</label>
+            <div class=\"control\">
+              <input class=\"input\" type=\"text\" placeholder=\"Justificatifs...\" name=\"nbJustificatifs\" required=\"required\" autocomplete=\"off\">
+            </div>
+          </div>
+          <div class=\"field\">
+            <label class=\"label\">2. Montant Valide</label>
+            <div class=\"control\">
+              <input class=\"input\" type=\"text\" placeholder=\"Montant...\" name=\"montantValide\" required=\"required\" autocomplete=\"off\">
+            </div>
+          </div>
+          <div class=\"field is-grouped\">
+            <div class=\"control\">
+              <button class=\"button is-primary\" type=\"submit\"><i class=\"fas fa-edit\"></i> Modifier</button>
+            </div>
+            <div class=\"control\">
+              <button class=\"button is-light\" type=\"reset\"><i class=\"\"></i> Annuler</button>
+            </div>
+          </div>
+        </form>
+        <h2 class=\"subtitle is-5 has-text-centered\"><a href=\"/Comptable/SuivreFicheFrais/SuivreValide\"><i class=\"fas fa-arrow-left\"></i> Retour</a></h2>
+      </section>
+    </div>
+    <script defer src=\"https://use.fontawesome.com/releases/v5.14.0/js/all.js\"></script>
+  </body>
 </html>", "comptable/modifierFicheFrais.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/modifierFicheFrais.html.twig");
     }
 }

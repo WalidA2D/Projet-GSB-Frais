@@ -31,9 +31,10 @@ return [
     'app_ComptableFicheFormulaire' => [[], ['_controller' => 'App\\Controller\\ComptableController::formulaireFicheFrais'], [], [['text', '/Comptable/FormulaireFicheFrais']], [], [], []],
     'app_ComptableFicheValideFormulaire' => [[], ['_controller' => 'App\\Controller\\ComptableController::formulaireValiderFicheFrais'], [], [['text', '/Comptable/FormulaireValiderFicheFrais']], [], [], []],
     'app_ComptableFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::suivreFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais']], [], [], []],
-    'app_ComptableModifFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::modif'], [], [['text', '/Comptable/SuivreFicheFrais/Modifier']], [], [], []],
-    'app_ComptableModifierFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::modifierFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/ModifierFicheFrais']], [], [], []],
+    'app_ComptableModifFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::modif'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide/Modifier']], [], [], []],
+    'app_ComptableModifierFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::modifierFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide/ModifierFicheFrais']], [], [], []],
     'app_ComptableDetailFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::detailFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/DetailFicheFrais']], [], [], []],
-    'app_ComptableRembourserFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::rembourserFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/Rembourser']], [], [], []],
+    'app_ComptableRembourserFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::rembourserFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide/Rembourser']], [], [], []],
     'app_ComptableSuivreFicheFraisValider' => [[], ['_controller' => 'App\\Controller\\ComptableController::suivreFicheFraisValider'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide']], [], [], []],
+    'app_ComptableValiderLaFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::validerFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/Valider']], [], [], []],
 ];

@@ -20,7 +20,7 @@ INSERT INTO `Etat` (`id`, `libelle`) VALUES
 ('RB', 'Remboursée'),
 ('CL', 'Saisie clôturée'),
 ('CR', 'Fiche créée, saisie en cours'),
-('VA', 'Validée');
+('VA', 'Validée'),
 ('MP', 'Mise en paiement');
 
 -- --------------------------------------------------------
@@ -79,5 +79,7 @@ insert into FicheFrais(idVisiteur,mois,AnneeMois) values("a131", "Mars", "03-202
 insert into LigneFraisForfait values ("a131", "Mars",  "03-2023", "ETP", 0);
 insert into LigneFraisHorsForfait(idVisiteur,mois,AnneeMois,libelle,date,montant) values ("a131", "Mars",  "03-2023", "Voyage Mexique", "2023-03-10",0);
 
-
+insert into FicheFrais(idVisiteur,mois,AnneeMois) values("a55", "Mars", "03-2023");
+insert into LigneFraisForfait values ("a55", "Mars",  "03-2023", "ETP", 0);
+insert into LigneFraisHorsForfait(idVisiteur,mois,AnneeMois,libelle,date,montant) values ("a55", "Mars",  "03-2023", "Voyage Mexique", "2023-03-10",0);
 

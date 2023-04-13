@@ -75,14 +75,14 @@ app_ComptableFiche:
 
 
 
-
+ 
 
 app_ComptableModifFiche:
-  path: /Comptable/SuivreFicheFrais/Modifier
+  path: /Comptable/SuivreFicheFrais/SuivreValide/Modifier
   controller: App\Controller\ComptableController::modif
 
 app_ComptableModifierFiche:
-  path: /Comptable/SuivreFicheFrais/ModifierFicheFrais
+  path: /Comptable/SuivreFicheFrais/SuivreValide/ModifierFicheFrais
   controller: App\Controller\ComptableController::modifierFicheFrais
 
 app_ComptableDetailFiche:
@@ -92,7 +92,7 @@ app_ComptableDetailFiche:
 
 
 app_ComptableRembourserFiche:
-  path: /Comptable/SuivreFicheFrais/Rembourser
+  path: /Comptable/SuivreFicheFrais/SuivreValide/Rembourser
   controller: App\Controller\ComptableController::rembourserFicheFrais
 
 
@@ -100,6 +100,6 @@ app_ComptableSuivreFicheFraisValider:
   path: /Comptable/SuivreFicheFrais/SuivreValide
   controller: App\Controller\ComptableController::suivreFicheFraisValider
 
-  app_ComptableValider:
-  path: /Comptable/SuivreFicheFrais/FValider
+app_ComptableValiderLaFiche:
+  path: /Comptable/SuivreFicheFrais/Valider
   controller: App\Controller\ComptableController::validerFicheFrais

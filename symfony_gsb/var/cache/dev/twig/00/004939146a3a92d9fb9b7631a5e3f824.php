@@ -45,13 +45,52 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
 \t<meta charset=\"UTF-8\">
 \t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+\t<link rel=\"stylesheet\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\">
 \t<title>GSB Frais - Connexion</title>
 </head>
 <body>
-\t<h1> Connexion </h1>
-    <h2> <a href=\"./Visiteur/Connexion\"> Visiteur </a> </h2>
 
-    <h2> <a href=\"./Comptable/Connexion\"> Comptable </a> </h2>
+\t<section class=\"section\">
+\t\t<div class=\"container\">
+\t\t\t<h1 class=\"title has-text-centered\">Accueil</h1>
+\t\t\t<div class=\"columns is-centered\">
+\t\t\t\t<div class=\"column is-half\">
+\t\t\t\t\t<a href=\"./Visiteur/Connexion\"><div class=\"card\">
+\t\t\t\t\t
+\t\t\t\t\t\t<header class=\"card-header\">
+\t\t\t\t\t\t\t<p class=\"card-header-title\">
+\t\t\t\t\t\t\t\t<a href=\"./Visiteur/Connexion\">Visiteur</a>
+\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t</header>
+\t\t\t\t\t\t
+\t\t\t\t\t\t<div class=\"card-content\">
+\t\t\t\t\t\t\t<div class=\"content\">
+\t\t\t\t\t\t\t\t<p>Accéder à l'espace Visiteur pour saisir vos fiches de frais.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div></a>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"column is-half\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<header class=\"card-header\">
+\t\t\t\t\t\t\t<p class=\"card-header-title\">
+\t\t\t\t\t\t\t\t<a href=\"./Comptable/Connexion\">Comptable</a>
+\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t</header>
+\t\t\t\t\t\t<div class=\"card-content\">
+\t\t\t\t\t\t\t<div class=\"content\">
+\t\t\t\t\t\t\t\t<p>Accéder à l'espace Comptable pour valider les fiches de frais des visiteurs.</p>
+\t\t\t\t\t\t\t\t<br>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</section>
 
 </body>
 </html>
@@ -71,9 +110,14 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
         return "accueil/index.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -83,13 +127,49 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
 \t<meta charset=\"UTF-8\">
 \t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+\t<link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\">
 \t<title>GSB Frais - Connexion</title>
 </head>
 <body>
-\t<h1> Connexion </h1>
-    <h2> <a href=\"./Visiteur/Connexion\"> Visiteur </a> </h2>
 
-    <h2> <a href=\"./Comptable/Connexion\"> Comptable </a> </h2>
+\t<section class=\"section\">
+\t\t<div class=\"container\">
+\t\t\t<h1 class=\"title has-text-centered\">Accueil</h1>
+\t\t\t<div class=\"columns is-centered\">
+\t\t\t\t<div class=\"column is-half\">
+\t\t\t\t\t<a href=\"./Visiteur/Connexion\"><div class=\"card\">
+\t\t\t\t\t
+\t\t\t\t\t\t<header class=\"card-header\">
+\t\t\t\t\t\t\t<p class=\"card-header-title\">
+\t\t\t\t\t\t\t\t<a href=\"./Visiteur/Connexion\">Visiteur</a>
+\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t</header>
+\t\t\t\t\t\t
+\t\t\t\t\t\t<div class=\"card-content\">
+\t\t\t\t\t\t\t<div class=\"content\">
+\t\t\t\t\t\t\t\t<p>Accéder à l'espace Visiteur pour saisir vos fiches de frais.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div></a>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"column is-half\">
+\t\t\t\t\t<div class=\"card\">
+\t\t\t\t\t\t<header class=\"card-header\">
+\t\t\t\t\t\t\t<p class=\"card-header-title\">
+\t\t\t\t\t\t\t\t<a href=\"./Comptable/Connexion\">Comptable</a>
+\t\t\t\t\t\t\t</p>
+\t\t\t\t\t\t</header>
+\t\t\t\t\t\t<div class=\"card-content\">
+\t\t\t\t\t\t\t<div class=\"content\">
+\t\t\t\t\t\t\t\t<p>Accéder à l'espace Comptable pour valider les fiches de frais des visiteurs.</p>
+\t\t\t\t\t\t\t\t<br>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</section>
 
 </body>
 </html>

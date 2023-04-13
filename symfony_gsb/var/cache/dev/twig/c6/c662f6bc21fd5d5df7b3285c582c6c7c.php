@@ -44,63 +44,71 @@ class __TwigTemplate_cde0396280d4c289319d865c39fb6322 extends Template
 <html lang=\"fr\">
 <head>
     <meta charset=\"UTF-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 7
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("style.css"), "html", null, true);
+        echo "\">
     <title>Liste des lignes de frais forfaitaires</title>
 </head>
 <body>
-    <h1>Détail</h1>
-    <h2> <a href=\"./\"> Retour</a> </h2>
-    <h2>Liste des lignes de frais forfaitaires</h2>
-    <ul>
-       
-            
-            <li>idVisiteur : ";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 14, $this->source); })()), "idVisiteur", [], "array", false, false, false, 14), "html", null, true);
+    <section class=\"section\">
+        <div class=\"container\">
+            <h1 class=\"title\">Détail</h1>
+            <h2 class=\"subtitle\"><a href=\"./\">Retour</a></h2>
+            <h2 class=\"subtitle\">Liste des lignes de frais forfaitaires</h2>
+            <div class=\"box\">
+                <ul>
+                    <li>idVisiteur: ";
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 18, $this->source); })()), "idVisiteur", [], "array", false, false, false, 18), "html", null, true);
         echo "<br></li>
-            <li>mois : ";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 15, $this->source); })()), "mois", [], "array", false, false, false, 15), "html", null, true);
+                    <li>mois: ";
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 19, $this->source); })()), "mois", [], "array", false, false, false, 19), "html", null, true);
         echo "<br></li>
-            <li>idFraisForfait : ";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 16, $this->source); })()), "idFraisForfait", [], "array", false, false, false, 16), "html", null, true);
+                    <li>idFraisForfait: ";
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 20, $this->source); })()), "idFraisForfait", [], "array", false, false, false, 20), "html", null, true);
         echo "<br></li>
-            <li>quantite : ";
-        // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 17, $this->source); })()), "quantite", [], "array", false, false, false, 17), "html", null, true);
+                    <li>quantite: ";
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheFrais"]) || array_key_exists("ficheFrais", $context) ? $context["ficheFrais"] : (function () { throw new RuntimeError('Variable "ficheFrais" does not exist.', 21, $this->source); })()), "quantite", [], "array", false, false, false, 21), "html", null, true);
         echo "<br></li>
-           
-        
-    </ul>
-    <h2>Liste des lignes de frais hors forfaitaires</h2>
-    <ul>
-    
-            <li>id : ";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 24, $this->source); })()), "id", [], "array", false, false, false, 24), "html", null, true);
-        echo "<br></li>
-            <li>idVisiteur : ";
-        // line 25
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 25, $this->source); })()), "idVisiteur", [], "array", false, false, false, 25), "html", null, true);
-        echo "<br></li>
-            <li>mois : ";
-        // line 26
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 26, $this->source); })()), "mois", [], "array", false, false, false, 26), "html", null, true);
-        echo "<br></li>
-            <li>libelle : ";
+                </ul>
+            </div>
+            <h2 class=\"subtitle\">Liste des lignes de frais hors forfaitaires</h2>
+            <div class=\"box\">
+                <ul>
+                    <li>id: ";
         // line 27
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 27, $this->source); })()), "libelle", [], "array", false, false, false, 27), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 27, $this->source); })()), "id", [], "array", false, false, false, 27), "html", null, true);
         echo "<br></li>
-            <li>date : ";
+                    <li>idVisiteur: ";
         // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 28, $this->source); })()), "date", [], "array", false, false, false, 28), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 28, $this->source); })()), "idVisiteur", [], "array", false, false, false, 28), "html", null, true);
         echo "<br></li>
-            <li>montant : ";
+                    <li>mois: ";
         // line 29
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 29, $this->source); })()), "montant", [], "array", false, false, false, 29), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 29, $this->source); })()), "mois", [], "array", false, false, false, 29), "html", null, true);
         echo "<br></li>
-        
-    </ul>
+                    <li>libelle: ";
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 30, $this->source); })()), "libelle", [], "array", false, false, false, 30), "html", null, true);
+        echo "<br></li>
+                    <li>date: ";
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 31, $this->source); })()), "date", [], "array", false, false, false, 31), "html", null, true);
+        echo "<br></li>
+                    <li>montant: ";
+        // line 32
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ficheHorsFrais"]) || array_key_exists("ficheHorsFrais", $context) ? $context["ficheHorsFrais"] : (function () { throw new RuntimeError('Variable "ficheHorsFrais" does not exist.', 32, $this->source); })()), "montant", [], "array", false, false, false, 32), "html", null, true);
+        echo "<br></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>";
         
@@ -123,7 +131,7 @@ class __TwigTemplate_cde0396280d4c289319d865c39fb6322 extends Template
 
     public function getDebugInfo()
     {
-        return array (  100 => 29,  96 => 28,  92 => 27,  88 => 26,  84 => 25,  80 => 24,  70 => 17,  66 => 16,  62 => 15,  58 => 14,  43 => 1,);
+        return array (  106 => 32,  102 => 31,  98 => 30,  94 => 29,  90 => 28,  86 => 27,  77 => 21,  73 => 20,  69 => 19,  65 => 18,  51 => 7,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -132,33 +140,38 @@ class __TwigTemplate_cde0396280d4c289319d865c39fb6322 extends Template
 <html lang=\"fr\">
 <head>
     <meta charset=\"UTF-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <link rel=\"stylesheet\" href=\"{{ asset('style.css') }}\">
     <title>Liste des lignes de frais forfaitaires</title>
 </head>
 <body>
-    <h1>Détail</h1>
-    <h2> <a href=\"./\"> Retour</a> </h2>
-    <h2>Liste des lignes de frais forfaitaires</h2>
-    <ul>
-       
-            
-            <li>idVisiteur : {{ ficheFrais['idVisiteur']}}<br></li>
-            <li>mois : {{ ficheFrais['mois']}}<br></li>
-            <li>idFraisForfait : {{ ficheFrais['idFraisForfait']}}<br></li>
-            <li>quantite : {{ ficheFrais['quantite']}}<br></li>
-           
-        
-    </ul>
-    <h2>Liste des lignes de frais hors forfaitaires</h2>
-    <ul>
-    
-            <li>id : {{ ficheHorsFrais['id']}}<br></li>
-            <li>idVisiteur : {{ ficheHorsFrais['idVisiteur']}}<br></li>
-            <li>mois : {{ ficheHorsFrais['mois']}}<br></li>
-            <li>libelle : {{ ficheHorsFrais['libelle']}}<br></li>
-            <li>date : {{ ficheHorsFrais['date']}}<br></li>
-            <li>montant : {{ ficheHorsFrais['montant']}}<br></li>
-        
-    </ul>
+    <section class=\"section\">
+        <div class=\"container\">
+            <h1 class=\"title\">Détail</h1>
+            <h2 class=\"subtitle\"><a href=\"./\">Retour</a></h2>
+            <h2 class=\"subtitle\">Liste des lignes de frais forfaitaires</h2>
+            <div class=\"box\">
+                <ul>
+                    <li>idVisiteur: {{ ficheFrais['idVisiteur'] }}<br></li>
+                    <li>mois: {{ ficheFrais['mois'] }}<br></li>
+                    <li>idFraisForfait: {{ ficheFrais['idFraisForfait'] }}<br></li>
+                    <li>quantite: {{ ficheFrais['quantite'] }}<br></li>
+                </ul>
+            </div>
+            <h2 class=\"subtitle\">Liste des lignes de frais hors forfaitaires</h2>
+            <div class=\"box\">
+                <ul>
+                    <li>id: {{ ficheHorsFrais['id'] }}<br></li>
+                    <li>idVisiteur: {{ ficheHorsFrais['idVisiteur'] }}<br></li>
+                    <li>mois: {{ ficheHorsFrais['mois'] }}<br></li>
+                    <li>libelle: {{ ficheHorsFrais['libelle'] }}<br></li>
+                    <li>date: {{ ficheHorsFrais['date'] }}<br></li>
+                    <li>montant: {{ ficheHorsFrais['montant'] }}<br></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>", "comptable/detailFicheFrais.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/detailFicheFrais.html.twig");
     }
