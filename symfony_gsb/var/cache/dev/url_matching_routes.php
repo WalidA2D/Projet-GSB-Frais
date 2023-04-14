@@ -19,6 +19,8 @@ return [
         '/Visiteur/Connecter' => [[['_route' => 'app_VisiteurConnecter', '_controller' => 'App\\Controller\\VisiteurController::connecter'], null, null, null, false, false, null]],
         '/Visiteur/Deconnecter' => [[['_route' => 'app_VisiteurDeconnecter', '_controller' => 'App\\Controller\\VisiteurController::deconnecter'], null, null, null, false, false, null]],
         '/Visiteur/Accueil' => [[['_route' => 'app_VisiteurAccueil', '_controller' => 'App\\Controller\\VisiteurController::accueil'], null, null, null, false, false, null]],
+        '/Visiteur/Consulter' => [[['_route' => 'app_VisiteurConsulterVue', '_controller' => 'App\\Controller\\VisiteurController::consulterVue'], null, null, null, false, false, null]],
+        '/Visiteur/ConsulterController' => [[['_route' => 'app_VisiteurConsulter', '_controller' => 'App\\Controller\\VisiteurController::consulter'], null, null, null, false, false, null]],
         '/Visiteur/FicheDeFrais' => [[['_route' => 'app_VisiteurFicheFraisVue', '_controller' => 'App\\Controller\\VisiteurController::ficheFraisVue'], null, null, null, false, false, null]],
         '/Visiteur/FicheDeFraisController' => [[['_route' => 'app_VisiteurFicheFrais', '_controller' => 'App\\Controller\\VisiteurController::ficheFrais'], null, null, null, false, false, null]],
         '/Visiteur/SupprimerFicheHorsForfait' => [[['_route' => 'app_SupprimerFicheHorsForfait', '_controller' => 'App\\Controller\\VisiteurController::supprimerFicheHorsForfait'], null, ['POST' => 0], null, false, false, null]],

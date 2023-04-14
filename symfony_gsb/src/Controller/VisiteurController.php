@@ -108,6 +108,51 @@ class VisiteurController extends AbstractController
             
     }
 
+    public function consulterVue(): Response
+    {
+        session_start();
+
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            return $this->render('visiteur/consulterVisiteur.html.twig', []);
+        }
+
+    }
+
+    public function consulter()
+    {
+
+
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            $mois = $_POST['mois'];
+            $idVisiteur = $_SESSION['idVisiteur'];
+
+            $ligneFicheFrais = ConnexionBdd::getLigneFicheFrais($idVisiteur, $mois);
+            $ligneFicheFraisHF = ConnexionBdd::getLigneFicheFraisHF($idVisiteur, $mois);
+
+
+            if (empty($ligneFicheFrais)) {
+                return $this->redirect('./Consulter');
+            }else{
+                return $this->render('visiteur/resultConsulterVisiteur.html.twig', [
+                    'ligneFicheFrais' => $ligneFicheFrais,
+                    'ligneFicheFraisHF' => $ligneFicheFraisHF,
+                ]);            
+            }
+
+        }
+
+
+
+
+
+    }
+
+
+
 
 
     public function ficheFraisVue(): Response

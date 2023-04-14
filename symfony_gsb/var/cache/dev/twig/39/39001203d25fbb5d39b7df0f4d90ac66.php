@@ -1092,6 +1092,6 @@ $context["log"], "type", [], "any", false, false, false, 142))) ? ("silenced") :
         {% endif %}
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/logger.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/vendor/symfony/web-profiler-bundle/Resources/views/Collector/logger.html.twig");
+", "@WebProfiler/Collector/logger.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/vendor/symfony/web-profiler-bundle/Resources/views/Collector/logger.html.twig");
     }
 }

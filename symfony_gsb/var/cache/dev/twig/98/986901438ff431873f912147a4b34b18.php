@@ -450,6 +450,6 @@ class __TwigTemplate_3fabad562ca7719d8d00e5168bc86fb3 extends Template
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
     }
 }

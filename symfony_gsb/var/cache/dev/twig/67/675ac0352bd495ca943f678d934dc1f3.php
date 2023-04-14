@@ -222,6 +222,6 @@ class __TwigTemplate_ca6e93a264d38172d7dc508c922cd9ee extends Template
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

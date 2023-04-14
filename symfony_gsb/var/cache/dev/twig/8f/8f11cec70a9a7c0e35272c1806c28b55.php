@@ -256,6 +256,6 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
       </footer>
 -!>
     
-", "comptable/suivreFicheFrais.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/suivreFicheFrais.html.twig");
+", "comptable/suivreFicheFrais.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/templates/comptable/suivreFicheFrais.html.twig");
     }
 }

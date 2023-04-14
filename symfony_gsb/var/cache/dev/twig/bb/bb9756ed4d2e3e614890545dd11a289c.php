@@ -113,10 +113,7 @@ class __TwigTemplate_aecedfaa9cacd6875a2f7022cf63da7d extends Template
                 // line 41
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "mois", [], "any", false, false, false, 41), "html", null, true);
                 echo " name=\"mois\" />
-          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')\" type=\"submit\">";
-                // line 42
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 42), "html", null, true);
-                echo "</button>
+          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')\" type=\"submit\">Mettre en paiement</button>
         </form>
 
         ";
@@ -225,7 +222,7 @@ $context["fiche"], "idEtat", [], "any", false, false, false, 45) == "MP")) {
 
     public function getDebugInfo()
     {
-        return array (  179 => 70,  172 => 68,  168 => 66,  166 => 65,  162 => 63,  154 => 58,  150 => 57,  147 => 56,  145 => 55,  142 => 54,  134 => 49,  130 => 48,  126 => 46,  124 => 45,  118 => 42,  114 => 41,  110 => 40,  106 => 38,  104 => 37,  99 => 35,  95 => 34,  91 => 33,  87 => 32,  83 => 31,  80 => 30,  76 => 29,  50 => 6,  43 => 1,);
+        return array (  176 => 70,  169 => 68,  165 => 66,  163 => 65,  159 => 63,  151 => 58,  147 => 57,  144 => 56,  142 => 55,  139 => 54,  131 => 49,  127 => 48,  123 => 46,  121 => 45,  114 => 41,  110 => 40,  106 => 38,  104 => 37,  99 => 35,  95 => 34,  91 => 33,  87 => 32,  83 => 31,  80 => 30,  76 => 29,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -271,7 +268,7 @@ $context["fiche"], "idEtat", [], "any", false, false, false, 45) == "MP")) {
         <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/Modifier\" method=\"POST\">
           <input type=\"hidden\" value={{fiche.idVisiteur}} name=\"idVisiteur\" />
           <input type=\"hidden\" value={{fiche.mois}} name=\"mois\" />
-          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')\" type=\"submit\">{{ fiche.idEtat }}</button>
+          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')\" type=\"submit\">Mettre en paiement</button>
         </form>
 
         {% elseif fiche.idEtat == \"MP\" %}
@@ -327,6 +324,6 @@ $context["fiche"], "idEtat", [], "any", false, false, false, 45) == "MP")) {
       </div>
       </div>
       </footer>
--!>", "comptable/suivreFicheFraisValider.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/suivreFicheFraisValider.html.twig");
+-!>", "comptable/suivreFicheFraisValider.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/templates/comptable/suivreFicheFraisValider.html.twig");
     }
 }

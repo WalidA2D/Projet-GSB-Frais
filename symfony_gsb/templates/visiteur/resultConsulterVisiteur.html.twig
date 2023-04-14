@@ -1,0 +1,34 @@
+<fieldset>
+	<legend>Fiche Frais Forfait</legend>
+
+        {% for uneLigneFicheFrais in ligneFicheFrais %}
+
+                <tr>
+                <td>Libelle : {{uneLigneFicheFrais['libelle']}}</td>
+                </br>
+                <td>Quantite : {{uneLigneFicheFrais['quantite']}}</td>
+                </br>
+
+                </tr>
+
+        {% endfor %}
+
+</fieldset>
+
+
+<fieldset>
+	<legend>Fiche Frais Hors Forfait</legend>
+
+        {% for uneLigneFicheFraisHF in ligneFicheFraisHF %}
+
+            <tr>
+                <td>Libelle : {{uneLigneFicheFraisHF['libelle']}}</td>
+                </br>
+                <td>Montant : {{uneLigneFicheFraisHF['montant']}}</td>
+                </br>
+            </tr>
+
+        {% endfor %}
+
+</fieldset>
+

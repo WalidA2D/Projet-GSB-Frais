@@ -209,6 +209,6 @@ class __TwigTemplate_cc6aeffe7554290a777823ff19f3ff4b extends Template
         </div>
     </section>
 </body>
-</html>", "comptable/detailFicheFraisValider.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/detailFicheFraisValider.html.twig");
+</html>", "comptable/detailFicheFraisValider.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/templates/comptable/detailFicheFraisValider.html.twig");
     }
 }

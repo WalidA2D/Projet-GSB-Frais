@@ -21,6 +21,8 @@ return [
     'app_VisiteurConnecter' => [[], ['_controller' => 'App\\Controller\\VisiteurController::connecter'], [], [['text', '/Visiteur/Connecter']], [], [], []],
     'app_VisiteurDeconnecter' => [[], ['_controller' => 'App\\Controller\\VisiteurController::deconnecter'], [], [['text', '/Visiteur/Deconnecter']], [], [], []],
     'app_VisiteurAccueil' => [[], ['_controller' => 'App\\Controller\\VisiteurController::accueil'], [], [['text', '/Visiteur/Accueil']], [], [], []],
+    'app_VisiteurConsulterVue' => [[], ['_controller' => 'App\\Controller\\VisiteurController::consulterVue'], [], [['text', '/Visiteur/Consulter']], [], [], []],
+    'app_VisiteurConsulter' => [[], ['_controller' => 'App\\Controller\\VisiteurController::consulter'], [], [['text', '/Visiteur/ConsulterController']], [], [], []],
     'app_VisiteurFicheFraisVue' => [[], ['_controller' => 'App\\Controller\\VisiteurController::ficheFraisVue'], [], [['text', '/Visiteur/FicheDeFrais']], [], [], []],
     'app_VisiteurFicheFrais' => [[], ['_controller' => 'App\\Controller\\VisiteurController::ficheFrais'], [], [['text', '/Visiteur/FicheDeFraisController']], [], [], []],
     'app_SupprimerFicheHorsForfait' => [[], ['_controller' => 'App\\Controller\\VisiteurController::supprimerFicheHorsForfait'], [], [['text', '/Visiteur/SupprimerFicheHorsForfait']], [], [], []],

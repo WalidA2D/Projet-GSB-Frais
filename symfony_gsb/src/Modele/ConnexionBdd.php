@@ -82,6 +82,58 @@ use PDO;
                     header( 'Location: ../index.php?echec=0' ) ;
                 }
             } 
+
+        
+            
+            public static function getLigneFicheFrais($idVisiteur, $mois){
+
+                try{
+        
+                    $bd = ConnexionBdd::getConnexion();
+    
+                    $sql = 'select quantite, libelle, montant from FicheFrais as f inner join ( select libelle, montant, quantite, e.idVisiteur, e.mois from LigneFraisForfait as e inner join FraisForfait as a on e.idFraisForfait  = a.id) as l on f.mois = l.mois and f.idVisiteur = l.idVisiteur where f.idVisiteur = :idVisiteur  and f.mois = :mois' ;
+
+                    $st = $bd -> prepare($sql);
+                    $st -> execute(array(':idVisiteur' => $idVisiteur,':mois' => $mois)) ;
+                    $ligneFicheFrais = $st -> fetchall() ;	
+        
+                    return $ligneFicheFrais;
+                }
+                
+    
+                catch( PDOException $e ){
+    
+                    die("Erreur : " . $e->getMessage());
+                    header( 'Location: ../index.php?echec=0' ) ;
+                }
+            }
+
+
+            public static function getLigneFicheFraisHF($idVisiteur, $mois){
+
+                try{
+        
+                    $bd = ConnexionBdd::getConnexion();
+    
+                    $sql = ' select id, dateModif, libelle, montant from FicheFrais as f inner join LigneFraisHorsForfait as l on f.mois = l.mois and f.idVisiteur = l.idVisiteur where f.idVisiteur = :idVisiteur and f.mois= :mois ' ;
+
+                    $st = $bd -> prepare($sql);
+                    $st -> execute(array(':idVisiteur' => $idVisiteur,':mois' => $mois)) ;
+                    $ligneFicheFraisHF = $st -> fetchall() ;	
+        
+                    return $ligneFicheFraisHF;
+                }
+                
+    
+                catch( PDOException $e ){
+    
+                    die("Erreur : " . $e->getMessage());
+                    header( 'Location: ../index.php?echec=0' ) ;
+                }
+            }
+
+
+        
             
 
 

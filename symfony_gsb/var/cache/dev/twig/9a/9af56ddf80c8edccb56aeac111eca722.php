@@ -125,6 +125,6 @@ class __TwigTemplate_6d43bdf7c2b0d76b5a1e3d3105219f39 extends Template
         </div>
     </section>
 </body>
-</html>", "comptable/accueilComptable.html.twig", "/media/etudiant/5C42-288C/Projet_GSB_Frais/Projet-GSB-Frais/symfony_gsb/templates/comptable/accueilComptable.html.twig");
+</html>", "comptable/accueilComptable.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/templates/comptable/accueilComptable.html.twig");
     }
 }
