@@ -1,0 +1,9 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+ 
+.section {
+    height: 100%;
+}
+body {
+    background: linear-gradient(70deg, #A7C0DC, #DBE4EE);
+}

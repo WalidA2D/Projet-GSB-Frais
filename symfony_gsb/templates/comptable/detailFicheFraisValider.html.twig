@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('styleDétail.css') }}">
+    <title>Liste des lignes de frais forfaitaires</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Détail</h1>
+            <h2 class="subtitle"><a href="/Comptable/Formulaire/RetourDétail">Retour</a></h2>
+            <h2 class="subtitle">Liste des lignes de frais forfaitaires</h2>
+            {% for ligneFraisForfait in ficheFrais %}    
+                <div class="box">
+                
+                    <ul> 
+                        <li>idVisiteur: {{ ligneFraisForfait['idVisiteur'] }}<br></li>
+                        <li>mois: {{ ligneFraisForfait['mois'] }}<br></li>
+                        <li>idFraisForfait: {{ ligneFraisForfait['idFraisForfait'] }}<br></li>
+                        <li>quantite: {{ ligneFraisForfait['quantite'] }}<br></li>
+                    </ul>
+                
+                </div>
+            {% endfor %}
+            <h2 class="subtitle">Liste des lignes de frais hors forfaitaires</h2>
+            {% for ligneFraisHorsForfait in ficheHorsFrais %}
+                <div class="box">
+                
+                    <ul>
+                        <li>id: {{ ligneFraisHorsForfait['id'] }}<br></li>
+                        <li>idVisiteur: {{ ligneFraisHorsForfait['idVisiteur'] }}<br></li>
+                        <li>mois: {{ ligneFraisHorsForfait['mois'] }}<br></li>
+                        <li>libelle: {{ ligneFraisHorsForfait['libelle'] }}<br></li>
+                        <li>date: {{ ligneFraisHorsForfait['date'] }}<br></li>
+                        <li>montant: {{ ligneFraisHorsForfait['montant'] }}<br></li>
+                    </ul>    
+                
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>

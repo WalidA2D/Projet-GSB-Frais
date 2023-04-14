@@ -35,13 +35,32 @@
       <td>{{ fiche.dateModif }}</td>
       <td>
         {% if fiche.idEtat == "VA" %}
-          <button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/SuivreValide/Modifier">{{ fiche.idEtat }}</a></button>
+
+        <form action="/Comptable/SuivreFicheFrais/SuivreValide/Modifier" method="POST">
+          <input type="hidden" value={{fiche.idVisiteur}} name="idVisiteur" />
+          <input type="hidden" value={{fiche.mois}} name="mois" />
+          <button class="button is-link is-light is-small" onclick="return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')" type="submit">Mettre en paiement</button>
+        </form>
+
         {% elseif fiche.idEtat == "MP" %}
-          <button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/SuivreValide/Rembourser">Remboursée</a></button>
+
+        <form action="/Comptable/SuivreFicheFrais/SuivreValide/Rembourser" method="POST">
+          <input type="hidden" value={{fiche.idVisiteur}} name="idVisiteur" />
+          <input type="hidden" value={{fiche.mois}} name="mois" />
+          <button class="button is-link is-light is-small" onclick="return confirm('Êtes-vous sûr de vouloir remboursée cet élément ?')" type="submit">Remboursée</button>
+        </form>
+        
         {% endif %}
+        
         {% if fiche.idEtat == "RB" %}
-          <button class="button is-link is-light is-small"><a href="/Comptable/SuivreFicheFrais/DetailFicheFrais">Détail</a></button>
+        <form action="/Comptable/SuivreFicheFrais/DetailFicheFraisValider" method="POST">
+          <input type="hidden" value={{fiche.idVisiteur}} name="idVisiteur" />
+          <input type="hidden" value={{fiche.mois}} name="mois" />
+          <button class="button is-link is-light is-small" type="submit">Détail</button>
+        </form>
+        
         {% endif %}
+      
       </td>
       {% if fiche.idEtat == "MP" %}
       <td>Mise en paiement</td>

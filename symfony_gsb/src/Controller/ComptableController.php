@@ -167,6 +167,7 @@ class ComptableController extends AbstractController
         
     }
 
+
     public function suivreFicheFraisValider(): Response
     {
         session_start();
@@ -174,8 +175,6 @@ class ComptableController extends AbstractController
         if($_SESSION == NULL){
             return $this->redirect('./Connexion');
         }else{
-            $mois = $_SESSION[ 'mois' ] ;
-            $idVisiteur = $_SESSION[ 'idVisiteur' ] ;
 
             $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFraisValider();
 
@@ -195,15 +194,48 @@ class ComptableController extends AbstractController
 
     public function modif(): Response
     {
-        session_start();
+        
+        
+            $status = session_status();
+            if($_SESSION == NULL){
+                return $this->redirect('/Comptable/Connexion');
+            }else{
+                if($status == PHP_SESSION_NONE){
+                
+                    session_start();
+                    $idVisiteur = $_POST[ 'idVisiteur' ] ;
+                    $mois = $_POST[ 'mois' ] ;
+                    $_SESSION[ "idVisiteur" ] = $idVisiteur ;
+                    $_SESSION[ "mois" ] = $mois ;
+            
+                    $rembourse = SuivreFicheFrais_Comptable::infoPourModif($mois, $idVisiteur);
+                    $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFraisValider();
+                    return $this->render('comptable/modifierFicheFrais.html.twig', [
+                    'controller_name' => 'ComptableController',
+                    'ficheFrais' => $ficheFrais, 
+                    ]);
+                }else
+                if($status == PHP_SESSION_ACTIVE){
+                    //Destroy current and start new one
+                    session_destroy();
+                    session_start();
+                    $idVisiteur = $_POST[ 'idVisiteur' ] ;
+                    $mois = $_POST[ 'mois' ] ;
+                    $_SESSION[ "idVisiteur" ] = $idVisiteur ;
+                    $_SESSION[ "mois" ] = $mois ;
+            
 
-        if($_SESSION == NULL){
-            return $this->redirect('./Connexion');
-        }else{
-            return $this->render('comptable/modifierFicheFrais.html.twig', [
-                'controller_name' => 'ComptableController',
-            ]);
-        }
+                    $rembourse = SuivreFicheFrais_Comptable::infoPourModif($mois, $idVisiteur);
+                    $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFraisValider();
+
+                    return $this->render('comptable/modifierFicheFrais.html.twig', [
+                    'controller_name' => 'ComptableController',
+                    'ficheFrais' => $ficheFrais, 
+                    ]);
+                }
+
+                
+            }
 
         
     }
@@ -283,19 +315,70 @@ class ComptableController extends AbstractController
         
     }
 
+    public function detailFicheFraisValider(): Response
+    {   
+           $status = session_status();
+            if($_SESSION == NULL){
+                return $this->redirect('/Comptable/Connexion');
+            }else{
+                if($status == PHP_SESSION_NONE){
+                
+                    session_start();
+                    $idVisiteur = $_POST[ 'idVisiteur' ] ;
+                    $mois = $_POST[ 'mois' ] ;
+                    $_SESSION[ "idVisiteur" ] = $idVisiteur ;
+                    $_SESSION[ "mois" ] = $mois ;
+            
+                    $ficheFrais=SuivreFicheFrais_Comptable::detailFicheFraisForfait($mois, $idVisiteur);
+                    $ficheHorsFrais=SuivreFicheFrais_Comptable::detailFicheFraisHorsForfait($mois, $idVisiteur);
+    
+            
+    
+                    return $this->render('comptable/detailFicheFraisValider.html.twig', [
+                    'ficheFrais' => $ficheFrais,   
+                    'ficheHorsFrais' => $ficheHorsFrais,         
+                    ]);
+                }else
+                if($status == PHP_SESSION_ACTIVE){
+                    //Destroy current and start new one
+                    session_destroy();
+                    session_start();
+                    $idVisiteur = $_POST[ 'idVisiteur' ] ;
+                    $mois = $_POST[ 'mois' ] ;
+                    $_SESSION[ "idVisiteur" ] = $idVisiteur ;
+                    $_SESSION[ "mois" ] = $mois ;
+            
+
+                    $ficheFrais=SuivreFicheFrais_Comptable::detailFicheFraisForfait($mois, $idVisiteur);
+                    $ficheHorsFrais=SuivreFicheFrais_Comptable::detailFicheFraisHorsForfait($mois, $idVisiteur);
+    
+            
+    
+                    return $this->render('comptable/detailFicheFraisValider.html.twig', [
+                    'ficheFrais' => $ficheFrais,   
+                    'ficheHorsFrais' => $ficheHorsFrais,         
+                    ]);
+                }
+
+                
+            }
+
+        
+    }
+
 
 
     public function rembourserFicheFrais(): Response
     {
-        session_start();
+        
 
         if($_SESSION == NULL){
             return $this->redirect('./Connexion');
         }else{
-            $mois = $_SESSION[ 'mois' ] ;
-            $idVisiteur = $_SESSION[ 'idVisiteur' ] ;
+            $idVisiteur = $_POST[ 'idVisiteur' ] ;
+            $mois = $_POST[ 'mois' ] ;
     
-            $rembourse = SuivreFicheFrais_Comptable::rembourserFicheFrais($mois, $idVisiteur);
+            $rembourse = SuivreFicheFrais_Comptable::rembourserFicheFrais($idVisiteur, $mois);
             $ficheFrais = SuivreFicheFrais_Comptable::suivreFicheFraisValider();
             
             return $this->render('comptable/suivreFicheFraisValider.html.twig', [
@@ -304,6 +387,24 @@ class ComptableController extends AbstractController
         }
 
         
+    }
+
+
+    public function killFormulaire(): Response{
+        $_SESSION[ "idVisiteur" ] = "" ;
+                    $_SESSION[ "mois" ] = "" ;
+                    $_SESSION[ "nbJustificatifs" ] = "" ;
+                    $_SESSION[ "montantValide" ] = "";
+                    $_SESSION[ "dateModif" ] = "" ;
+                    $_SESSION[ "idEtat" ] = "";
+        return $this->redirect('/Comptable/FormulaireFicheFrais');
+    }
+
+    public function killDetail(): Response{
+        $_SESSION[ "idVisiteur" ] = "" ;
+        $_SESSION[ "mois" ] = "" ;
+                  
+        return $this->redirect('/Comptable/SuivreFicheFrais/SuivreValide');
     }
 
 }

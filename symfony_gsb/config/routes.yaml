@@ -103,3 +103,15 @@ app_ComptableSuivreFicheFraisValider:
 app_ComptableValiderLaFiche:
   path: /Comptable/SuivreFicheFrais/Valider
   controller: App\Controller\ComptableController::validerFicheFrais
+
+app_ComptableRetourFormulaire:
+  path: /Comptable/Formulaire/Retour
+  controller: App\Controller\ComptableController::killFormulaire
+
+app_ComptableDetailFicheValider:
+  path: /Comptable/SuivreFicheFrais/DetailFicheFraisValider
+  controller: App\Controller\ComptableController::detailFicheFraisValider
+
+app_ComptableRetourDetail:
+  path: /Comptable/Formulaire/RetourDétail
+  controller: App\Controller\ComptableController::killDetail

@@ -55,7 +55,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
       <h1 class=\"title is-1 has-text-centered\">Valider fiche de frais</h1>
 
       <h2 class=\"subtitle is-3 has-text-centered\">
-        <button class=\"button is-link is-light\"><a href=\"/Comptable/Accueil\">Retour</a></button>    
+        <button class=\"button is-link is-light\"><a href=\"/Comptable/Formulaire/Retour\">Retour</a></button>    
       </h2>  
 
 
@@ -192,7 +192,7 @@ class __TwigTemplate_3bd02e5bdc46a7f42aad40ddac18677e extends Template
       <h1 class=\"title is-1 has-text-centered\">Valider fiche de frais</h1>
 
       <h2 class=\"subtitle is-3 has-text-centered\">
-        <button class=\"button is-link is-light\"><a href=\"/Comptable/Accueil\">Retour</a></button>    
+        <button class=\"button is-link is-light\"><a href=\"/Comptable/Formulaire/Retour\">Retour</a></button>    
       </h2>  
 
 

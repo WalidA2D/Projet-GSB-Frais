@@ -103,40 +103,79 @@ class __TwigTemplate_aecedfaa9cacd6875a2f7022cf63da7d extends Template
             // line 37
             if ((twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 37) == "VA")) {
                 // line 38
-                echo "          <button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/SuivreValide/Modifier\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 38), "html", null, true);
-                echo "</a></button>
-        ";
-            } elseif ((twig_get_attribute($this->env, $this->source,             // line 39
-$context["fiche"], "idEtat", [], "any", false, false, false, 39) == "MP")) {
+                echo "
+        <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/Modifier\" method=\"POST\">
+          <input type=\"hidden\" value=";
                 // line 40
-                echo "          <button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/SuivreValide/Rembourser\">Remboursée</a></button>
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "idVisiteur", [], "any", false, false, false, 40), "html", null, true);
+                echo " name=\"idVisiteur\" />
+          <input type=\"hidden\" value=";
+                // line 41
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "mois", [], "any", false, false, false, 41), "html", null, true);
+                echo " name=\"mois\" />
+          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')\" type=\"submit\">";
+                // line 42
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 42), "html", null, true);
+                echo "</button>
+        </form>
+
+        ";
+            } elseif ((twig_get_attribute($this->env, $this->source,             // line 45
+$context["fiche"], "idEtat", [], "any", false, false, false, 45) == "MP")) {
+                // line 46
+                echo "
+        <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/Rembourser\" method=\"POST\">
+          <input type=\"hidden\" value=";
+                // line 48
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "idVisiteur", [], "any", false, false, false, 48), "html", null, true);
+                echo " name=\"idVisiteur\" />
+          <input type=\"hidden\" value=";
+                // line 49
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "mois", [], "any", false, false, false, 49), "html", null, true);
+                echo " name=\"mois\" />
+          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir remboursée cet élément ?')\" type=\"submit\">Remboursée</button>
+        </form>
+        
         ";
             }
-            // line 42
-            echo "        ";
-            if ((twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 42) == "RB")) {
-                // line 43
-                echo "          <button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/DetailFicheFrais\">Détail</a></button>
+            // line 54
+            echo "        
+        ";
+            // line 55
+            if ((twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 55) == "RB")) {
+                // line 56
+                echo "        <form action=\"/Comptable/SuivreFicheFrais/DetailFicheFraisValider\" method=\"POST\">
+          <input type=\"hidden\" value=";
+                // line 57
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "idVisiteur", [], "any", false, false, false, 57), "html", null, true);
+                echo " name=\"idVisiteur\" />
+          <input type=\"hidden\" value=";
+                // line 58
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fiche"], "mois", [], "any", false, false, false, 58), "html", null, true);
+                echo " name=\"mois\" />
+          <button class=\"button is-link is-light is-small\" type=\"submit\">Détail</button>
+        </form>
+        
         ";
             }
-            // line 45
-            echo "      </td>
+            // line 63
+            echo "      
+      </td>
       ";
-            // line 46
-            if ((twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 46) == "MP")) {
-                // line 47
+            // line 65
+            if ((twig_get_attribute($this->env, $this->source, $context["fiche"], "idEtat", [], "any", false, false, false, 65) == "MP")) {
+                // line 66
                 echo "      <td>Mise en paiement</td>
       ";
             }
-            // line 49
+            // line 68
             echo "    </tr>
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fiche'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 70
         echo "  </tbody>
 </table>
 
@@ -186,7 +225,7 @@ $context["fiche"], "idEtat", [], "any", false, false, false, 39) == "MP")) {
 
     public function getDebugInfo()
     {
-        return array (  140 => 51,  133 => 49,  129 => 47,  127 => 46,  124 => 45,  120 => 43,  117 => 42,  113 => 40,  111 => 39,  106 => 38,  104 => 37,  99 => 35,  95 => 34,  91 => 33,  87 => 32,  83 => 31,  80 => 30,  76 => 29,  50 => 6,  43 => 1,);
+        return array (  179 => 70,  172 => 68,  168 => 66,  166 => 65,  162 => 63,  154 => 58,  150 => 57,  147 => 56,  145 => 55,  142 => 54,  134 => 49,  130 => 48,  126 => 46,  124 => 45,  118 => 42,  114 => 41,  110 => 40,  106 => 38,  104 => 37,  99 => 35,  95 => 34,  91 => 33,  87 => 32,  83 => 31,  80 => 30,  76 => 29,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -228,13 +267,32 @@ $context["fiche"], "idEtat", [], "any", false, false, false, 39) == "MP")) {
       <td>{{ fiche.dateModif }}</td>
       <td>
         {% if fiche.idEtat == \"VA\" %}
-          <button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/SuivreValide/Modifier\">{{ fiche.idEtat }}</a></button>
+
+        <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/Modifier\" method=\"POST\">
+          <input type=\"hidden\" value={{fiche.idVisiteur}} name=\"idVisiteur\" />
+          <input type=\"hidden\" value={{fiche.mois}} name=\"mois\" />
+          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir mettre en paiement cet élément ?')\" type=\"submit\">{{ fiche.idEtat }}</button>
+        </form>
+
         {% elseif fiche.idEtat == \"MP\" %}
-          <button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/SuivreValide/Rembourser\">Remboursée</a></button>
+
+        <form action=\"/Comptable/SuivreFicheFrais/SuivreValide/Rembourser\" method=\"POST\">
+          <input type=\"hidden\" value={{fiche.idVisiteur}} name=\"idVisiteur\" />
+          <input type=\"hidden\" value={{fiche.mois}} name=\"mois\" />
+          <button class=\"button is-link is-light is-small\" onclick=\"return confirm('Êtes-vous sûr de vouloir remboursée cet élément ?')\" type=\"submit\">Remboursée</button>
+        </form>
+        
         {% endif %}
+        
         {% if fiche.idEtat == \"RB\" %}
-          <button class=\"button is-link is-light is-small\"><a href=\"/Comptable/SuivreFicheFrais/DetailFicheFrais\">Détail</a></button>
+        <form action=\"/Comptable/SuivreFicheFrais/DetailFicheFraisValider\" method=\"POST\">
+          <input type=\"hidden\" value={{fiche.idVisiteur}} name=\"idVisiteur\" />
+          <input type=\"hidden\" value={{fiche.mois}} name=\"mois\" />
+          <button class=\"button is-link is-light is-small\" type=\"submit\">Détail</button>
+        </form>
+        
         {% endif %}
+      
       </td>
       {% if fiche.idEtat == \"MP\" %}
       <td>Mise en paiement</td>

@@ -88,7 +88,7 @@ class __TwigTemplate_bd8ab8777e85d9d800293b8e25c10f38 extends Template
                 </div>
               </div>
             </form>
-        <h2 class=\"subtitle has-text-centered\"><a href=\"../\">Retour</a></h2>
+        <h2 class=\"subtitle has-text-centered\"><i class=\"fas fa-arrow-left\"></i> <a href=\"../\">Retour</a></h2>
         </div>
       </div>
       </div>
@@ -170,7 +170,7 @@ class __TwigTemplate_bd8ab8777e85d9d800293b8e25c10f38 extends Template
                 </div>
               </div>
             </form>
-        <h2 class=\"subtitle has-text-centered\"><a href=\"../\">Retour</a></h2>
+        <h2 class=\"subtitle has-text-centered\"><i class=\"fas fa-arrow-left\"></i> <a href=\"../\">Retour</a></h2>
         </div>
       </div>
       </div>

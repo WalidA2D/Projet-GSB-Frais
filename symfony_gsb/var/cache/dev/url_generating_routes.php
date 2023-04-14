@@ -37,4 +37,7 @@ return [
     'app_ComptableRembourserFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::rembourserFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide/Rembourser']], [], [], []],
     'app_ComptableSuivreFicheFraisValider' => [[], ['_controller' => 'App\\Controller\\ComptableController::suivreFicheFraisValider'], [], [['text', '/Comptable/SuivreFicheFrais/SuivreValide']], [], [], []],
     'app_ComptableValiderLaFiche' => [[], ['_controller' => 'App\\Controller\\ComptableController::validerFicheFrais'], [], [['text', '/Comptable/SuivreFicheFrais/Valider']], [], [], []],
+    'app_ComptableRetourFormulaire' => [[], ['_controller' => 'App\\Controller\\ComptableController::killFormulaire'], [], [['text', '/Comptable/Formulaire/Retour']], [], [], []],
+    'app_ComptableDetailFicheValider' => [[], ['_controller' => 'App\\Controller\\ComptableController::detailFicheFraisValider'], [], [['text', '/Comptable/SuivreFicheFrais/DetailFicheFraisValider']], [], [], []],
+    'app_ComptableRetourDetail' => [[], ['_controller' => 'App\\Controller\\ComptableController::killDetail'], [], [['text', '/Comptable/Formulaire/RetourDétail']], [], [], []],
 ];

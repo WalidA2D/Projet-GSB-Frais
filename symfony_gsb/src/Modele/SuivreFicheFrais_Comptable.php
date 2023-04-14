@@ -168,8 +168,7 @@ class SuivreFicheFrais_Comptable {
         }
     } 
     
-    public static function rembourserFicheFrais($mois, $idVisiteur)
-{
+    public static function rembourserFicheFrais($idVisiteur, $mois){
     try {
         $bd = new PDO(
             'mysql:host=localhost;dbname=gsbFrais' ,
@@ -187,8 +186,8 @@ class SuivreFicheFrais_Comptable {
     
         $st->execute(array(
             ':idEtat' => "RB",
-            ':mois' => $mois,
-            ':idVisiteur' => $idVisiteur
+            ':idVisiteur' => $idVisiteur,
+            ':mois' => $mois 
         ));
 
         return true;
@@ -196,49 +195,47 @@ class SuivreFicheFrais_Comptable {
         die("Erreur : " . $e->getMessage());
         header('Location: ../index.php?echec=0');
     }
+
 }
     
-    public static function detailFicheFraisForfait($mois, $idVisiteur){
-        try {
-    
-            /*$bd = ConnexionBdd::getConnexion();*/
-            $bd = new PDO(
-    
-                'mysql:host=localhost;dbname=gsbFrais' ,
-                'adminGsb' ,
-                'azerty'
-            );
-    
-            $sql = 'select * from LigneFraisForfait'
-                    . ' where idVisiteur = :idVisiteur '
-                    . 'and mois = :mois';
+public static function detailFicheFraisForfait($mois, $idVisiteur){
+    try {
+
+        $bd = new PDO(
+            'mysql:host=localhost;dbname=gsbFrais' ,
+            'adminGsb' ,
+            'azerty'
+        );
+
+        $sql = 'select * from LigneFraisForfait'
+                . ' where idVisiteur = :idVisiteur '
+                . 'and mois = :mois';
+        
             
-                
         $st = $bd -> prepare( $sql ) ;
-    
+
         $st -> execute( array( 
-                                ':idVisiteur' => $idVisiteur ,
-                                ':mois' => $mois 
-                        ) 
-                    ) ;
-        $resultat = $st -> fetch(PDO::FETCH_ASSOC);
-    
-        return $resultat;
-        }
-    
-        catch( PDOException $e ){
-    
-            die("Erreur : " . $e->getMessage());
-            header( 'Location: ../index.php?echec=0' ) ;
-        }
-    } 
+            ':idVisiteur' => $idVisiteur ,
+            ':mois' => $mois 
+        ));
+        
+        $resultats = $st -> fetchAll(PDO::FETCH_ASSOC);
+
+        return $resultats;
+    }
+
+    catch( PDOException $e ){
+
+        die("Erreur : " . $e->getMessage());
+        header( 'Location: ../index.php?echec=0' ) ;
+    }
+}
+
     
     public static function detailFicheFraisHorsForfait($mois, $idVisiteur){
         try {
     
-            /*$bd = ConnexionBdd::getConnexion();*/
             $bd = new PDO(
-    
                 'mysql:host=localhost;dbname=gsbFrais' ,
                 'adminGsb' ,
                 'azerty'
@@ -247,6 +244,42 @@ class SuivreFicheFrais_Comptable {
             $sql = 'select * from LigneFraisHorsForfait'
                     . ' where idVisiteur = :idVisiteur '
                     . 'and mois = :mois';
+    
+            $st = $bd -> prepare( $sql ) ;
+    
+            $st -> execute( array( 
+                                    ':idVisiteur' => $idVisiteur ,
+                                    ':mois' => $mois 
+                            ) 
+                        ) ;
+    
+            $resultat = $st -> fetchAll(PDO::FETCH_ASSOC);
+    
+            return $resultat;
+        }
+    
+        catch( PDOException $e ){
+    
+            die("Erreur : " . $e->getMessage());
+            header( 'Location: ../index.php?echec=0' ) ;
+        }
+    }
+
+    public static function infoPourModif($mois, $idVisiteur){
+        try {
+    
+            /*$bd = ConnexionBdd::getConnexion();*/
+            $bd = new PDO(
+    
+                'mysql:host=localhost;dbname=gsbFrais' ,
+                'adminGsb' ,
+                'azerty'
+            );
+    
+            $sql = 'select * '
+                . 'from FicheFrais '
+                . 'where idVisiteur = :idVisiteur '
+                . 'and mois = :mois';
             
                 
         $st = $bd -> prepare( $sql ) ;
