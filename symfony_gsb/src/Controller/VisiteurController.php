@@ -120,6 +120,18 @@ class VisiteurController extends AbstractController
 
     }
 
+
+    public function retourConsulterVue(): Response{
+        session_start();
+
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            return $this->render('visiteur/accueilVisiteur.html.twig', []);
+        }
+
+    }
+
     public function consulter()
     {
 
@@ -145,9 +157,17 @@ class VisiteurController extends AbstractController
 
         }
 
+    }
 
 
+    public function retourConsulter(): Response{
+        session_start();
 
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            return $this->render('visiteur/consulterVisiteur.html.twig', []);
+        }
 
     }
 
@@ -180,6 +200,17 @@ class VisiteurController extends AbstractController
             }
             
             
+        }
+
+    }
+
+    public function ficheFraisVueRetour(): Response{
+        session_start();
+
+        if($_SESSION == NULL){
+            return $this->redirect('./Connexion');
+        }else{
+            return $this->render('visiteur/accueilVisiteur.html.twig', []);
         }
 
     }

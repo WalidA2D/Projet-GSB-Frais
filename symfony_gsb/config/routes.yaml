@@ -31,13 +31,26 @@ app_VisiteurConsulterVue:
   path: /Visiteur/Consulter
   controller: App\Controller\VisiteurController::consulterVue 
 
+app_VisiteurConsulterVueRetour:
+  path: /Visiteur/retourConsulter
+  controller: App\Controller\VisiteurController::retourConsulterVue 
+
 app_VisiteurConsulter:
-  path: /Visiteur/ConsulterController
+  path: /Visiteur/ConsulterResultat
   controller: App\Controller\VisiteurController::consulter 
+
+app_VisiteurConsulterRetour:
+  path: /Visiteur/ConsulterResultatRetour
+  controller: App\Controller\VisiteurController::retourConsulter 
 
 app_VisiteurFicheFraisVue:
   path: /Visiteur/FicheDeFrais
   controller: App\Controller\VisiteurController::ficheFraisVue 
+
+
+app_VisiteurFicheFraisVueRetour:
+  path: /Visiteur/FicheDeFraisRetour
+  controller: App\Controller\VisiteurController::ficheFraisVueRetour
 
 app_VisiteurFicheFrais:
   path: /Visiteur/FicheDeFraisController

@@ -43,7 +43,7 @@ class __TwigTemplate_4b54d0cbcfc6a5945118dd02cc28e37e extends Template
         echo "<fieldset>
 \t<legend>Consulter Fiche Frais</legend>
 \t
-\t\t<form action=\"/Visiteur/ConsulterController\" method=\"POST\">
+\t\t<form action=\"/Visiteur/ConsulterResultat\" method=\"POST\">
             Sélectionner le mois à consulter :<br/>
             <br/>
 
@@ -66,6 +66,8 @@ class __TwigTemplate_4b54d0cbcfc6a5945118dd02cc28e37e extends Template
 
             <input type=\"submit\" value=\"Valider\"/>
         </form>
+        <br/>
+    <button> <a href=\"./retourConsulter\"</a> Retour </button>
 </fieldset>\t";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -90,7 +92,7 @@ class __TwigTemplate_4b54d0cbcfc6a5945118dd02cc28e37e extends Template
         return new Source("<fieldset>
 \t<legend>Consulter Fiche Frais</legend>
 \t
-\t\t<form action=\"/Visiteur/ConsulterController\" method=\"POST\">
+\t\t<form action=\"/Visiteur/ConsulterResultat\" method=\"POST\">
             Sélectionner le mois à consulter :<br/>
             <br/>
 
@@ -113,6 +115,8 @@ class __TwigTemplate_4b54d0cbcfc6a5945118dd02cc28e37e extends Template
 
             <input type=\"submit\" value=\"Valider\"/>
         </form>
+        <br/>
+    <button> <a href=\"./retourConsulter\"</a> Retour </button>
 </fieldset>\t", "visiteur/consulterVisiteur.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/templates/visiteur/consulterVisiteur.html.twig");
     }
 }

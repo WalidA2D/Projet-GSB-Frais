@@ -106,6 +106,9 @@ class __TwigTemplate_68a882e6c956474ac89062fe9cb12e08 extends Template
         echo "
 </fieldset>
 
+    <button> <a href=\"./ConsulterResultatRetour\"</a> Retour </button>
+
+
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -165,6 +168,9 @@ class __TwigTemplate_68a882e6c956474ac89062fe9cb12e08 extends Template
         {% endfor %}
 
 </fieldset>
+
+    <button> <a href=\"./ConsulterResultatRetour\"</a> Retour </button>
+
 
 ", "visiteur/resultConsulterVisiteur.html.twig", "/home/r-mehdi/SIO/Projet-GSB-Frais/symfony_gsb/templates/visiteur/resultConsulterVisiteur.html.twig");
     }
